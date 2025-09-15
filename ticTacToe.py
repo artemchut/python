@@ -6,16 +6,18 @@ won=False
 spaces={"aOne": " ", "aTwo": " ", "aThree": " ", "bOne": " ", "bTwo": " ", "bThree": " ", "cOne": " ", "cTwo": " ", "cThree": " "}
 newTurn=random.randint(3,4)
 
+print("To place-type in a row first and then a column, eg: cTwo")
+
 while won==False:
     if newTurn%2==0:
 
         print(lettersTop)
         
-        print(f"  {spaces["aOne"]} | {spaces["bOne"]} | {spaces["cOne"]}")
+        print(f'  {spaces["aOne"]} | {spaces["bOne"]} | {spaces["cOne"]}')
         print(decorTop)
-        print(f"  {spaces["aTwo"]} | {spaces["bTwo"]} | {spaces["cTwo"]}")
+        print(f'  {spaces["aTwo"]} | {spaces["bTwo"]} | {spaces["cTwo"]}')
         print(decorBottom)
-        print(f"  {spaces["aThree"]} | {spaces["bThree"]} | {spaces["cThree"]}")
+        print(f' {spaces["aThree"]} | {spaces["bThree"]} | {spaces["cThree"]}')
         print("\n X turn now")
         inp=input("Enter: ").strip()
         while inp not in spaces or spaces[inp]=="X" or spaces[inp]=="O":
@@ -29,35 +31,35 @@ while won==False:
             print("X won!!")
             won=True
             
-        if spaces["aTwo"]=="X" and spaces["bTwo"]=="X" and spaces["cTwo"]=="X":
+        elif spaces["aTwo"]=="X" and spaces["bTwo"]=="X" and spaces["cTwo"]=="X":
             print("X won!!")
             won=True
             
-        if spaces["aThree"]=="X" and spaces["bThree"]=="X" and spaces["cThree"]=="X":
+        elif spaces["aThree"]=="X" and spaces["bThree"]=="X" and spaces["cThree"]=="X":
             print("X won!!")  
             won=True
             
 
         #VERTICAL WIN
-        if spaces["aOne"]=="X" and spaces["aTwo"]=="X" and spaces["aThree"]=="X":
+        elif spaces["aOne"]=="X" and spaces["aTwo"]=="X" and spaces["aThree"]=="X":
             print("X won!!")
             won=True
             
-        if spaces["bOne"]=="X" and spaces["bTwo"]=="X" and spaces["bThree"]=="X":
+        elif spaces["bOne"]=="X" and spaces["bTwo"]=="X" and spaces["bThree"]=="X":
             print("X won!!")
             won=True
             
-        if spaces["cThree"]=="X" and spaces["cThree"]=="X" and spaces["cThree"]=="X":
+        elif spaces["cOne"]=="X" and spaces["cTwo"]=="X" and spaces["cThree"]=="X":
             print("X won!!")  
             won=True
             
 
         #DIAGONAL WIN
-        if spaces["aOne"]=="X" and spaces["bTwo"]=="X" and spaces["cThree"]=="X":
+        elif spaces["aOne"]=="X" and spaces["bTwo"]=="X" and spaces["cThree"]=="X":
             print("X won!!")
             won=True
             
-        if spaces["cOne"]=="X" and spaces["bTwo"]=="X" and spaces["aThree"]=="X":
+        elif spaces["cOne"]=="X" and spaces["bTwo"]=="X" and spaces["aThree"]=="X":
             print("X won!!")
             won=True
               
@@ -65,11 +67,11 @@ while won==False:
         newTurn+=1
     if newTurn%2==1:
         print(lettersTop)
-        print(f"  {spaces["aOne"]} | {spaces["bOne"]} | {spaces["cOne"]}")
+        print(f'  {spaces["aOne"]} | {spaces["bOne"]} | {spaces["cOne"]}')
         print(decorTop)
-        print(f"  {spaces["aTwo"]} | {spaces["bTwo"]} | {spaces["cTwo"]}")
+        print(f' {spaces["aTwo"]} | {spaces["bTwo"]} | {spaces["cTwo"]}')
         print(decorBottom)
-        print(f"  {spaces["aThree"]} | {spaces["bThree"]} | {spaces["cThree"]}")
+        print(f'  {spaces["aThree"]} | {spaces["bThree"]} | {spaces["cThree"]}')
         print("\n O turn now")
 
         inp=input("Enter: ").strip()
@@ -85,44 +87,43 @@ while won==False:
             print("O won!!".center(13, " "))
             won=True
             
-        if spaces["aTwo"]=="O" and spaces["bTwo"]=="O" and spaces["cTwo"]=="O":
+        elif spaces["aTwo"]=="O" and spaces["bTwo"]=="O" and spaces["cTwo"]=="O":
             print("O won!!".center(13, " "))
             won=True
             
-        if spaces["aThree"]=="O" and spaces["bThree"]=="O" and spaces["cThree"]=="O":
+        elif spaces["aThree"]=="O" and spaces["bThree"]=="O" and spaces["cThree"]=="O":
             print("O won!!".center(13, " ")) 
             won=True
              
             
         #VERTICAL WIN
-        if spaces["aOne"]=="O" and spaces["aTwo"]=="O" and spaces["aThree"]=="O":
+        elif spaces["aOne"]=="O" and spaces["aTwo"]=="O" and spaces["aThree"]=="O":
             print("O won!!".center(13, " "))
             won=True
             
-        if spaces["bOne"]=="O" and spaces["bTwo"]=="O" and spaces["bThree"]=="O":
+        elif spaces["bOne"]=="O" and spaces["bTwo"]=="O" and spaces["bThree"]=="O":
             print("O won!!".center(13, " "))
             won=True
             
-        if spaces["cThree"]=="O" and spaces["cThree"]=="O" and spaces["cThree"]=="O":
+        elif spaces["cOne"]=="O" and spaces["cTwo"]=="O" and spaces["cThree"]=="O":
             print("O won!!".center(13, " ")) 
             won=True
             
 
         #DIAGONAL WIN
-        if spaces["aOne"]=="O" and spaces["bTwo"]=="O" and spaces["cThree"]=="O":
+        elif spaces["aOne"]=="O" and spaces["bTwo"]=="O" and spaces["cThree"]=="O":
             print("O won!!".center(13, " "))
             won=True
             
-        if spaces["cOne"]=="O" and spaces["bTwo"]=="O" and spaces["aThree"]=="O":
+        elif spaces["cOne"]=="O" and spaces["bTwo"]=="O" and spaces["aThree"]=="O":
             print("O won!!".center(13, " "))
             won=True
             
-
         newTurn+=1        
 
 print(lettersTop)
-print(f"  {spaces["aOne"]} | {spaces["bOne"]} | {spaces["cOne"]}")
+print(f'  {spaces["aOne"]} | {spaces["bOne"]} | {spaces["cOne"]}')
 print(decorTop)
-print(f"  {spaces["aTwo"]} | {spaces["bTwo"]} | {spaces["cTwo"]}")
+print(f'  {spaces["aTwo"]} | {spaces["bTwo"]} | {spaces["cTwo"]}')
 print(decorBottom)
-print(f"  {spaces["aThree"]} | {spaces["bThree"]} | {spaces["cThree"]}")        
+print(f'  {spaces["aThree"]} | {spaces["bThree"]} | {spaces["cThree"]}')        
