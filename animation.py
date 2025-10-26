@@ -1,8 +1,8 @@
 import time
 word=["he", "ll", "o!"]
 space=[[]]
-for i in range(0, len(space)):
-    space[i]=list(" "*36)
+
+space[0]=list(" "*36)
 
 while True:
     for j in range(12, 24):
@@ -14,8 +14,7 @@ while True:
                 space[0][j + i] = word[i]
                 print(f"|{"".join(space[0])}|")
 
-            for i in range(0, len(space)):
-                space[i] = list(" " * 36)
+            space[0] = list(" " * 36)
         time.sleep(0.2)
         print("\n")
         print("\n")
@@ -29,8 +28,7 @@ while True:
                 space[0][j - i] = word[i]
                 print(f"|{"".join(space[0])}|")
 
-            for i in range(0, len(space)):
-                space[i] = list(" " * 36)
+            space[0] = list(" " * 36)
         time.sleep(0.2)
         print("\n")
         print("\n")
