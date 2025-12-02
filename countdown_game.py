@@ -6,7 +6,7 @@ userAnsw=""
 userFullAnsw=""
 points=0
 
-
+print("In this game you get a set of 6 numbers and by using all of them and maths symbols you need to get as close as possible to a target number")
 num_required=int(input("Enter the number of required numbers you want to use(1-4): "))
 
 while num_required>4 or num_required<1:
@@ -40,8 +40,8 @@ for j in userAnsw:
         userFullAnsw+=j 
 
 userFullAnsw=eval(userFullAnsw)
-print(f"Result: {userFullAnsw}")
-print(abs(userFullAnsw-target))
+print(f"Your result: {userFullAnsw}")
+print(f"The difference between target and your answer is: {abs(userFullAnsw-target)}")
 
 if userFullAnsw==target:
     points=100 
@@ -56,6 +56,4 @@ elif abs(userFullAnsw-target)<50:
 elif abs(userFullAnsw-target)<100:
     points=20
           
-
-print(points)                      
-
+print(f"You have: {points} points")      
