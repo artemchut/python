@@ -25,3 +25,4 @@ print(f"Mode: {mode}")
 print(f"Range: {range}")
 
 print(sorted(inp))
+
