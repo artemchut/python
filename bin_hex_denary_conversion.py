@@ -26,6 +26,7 @@ def Bin_To_Hex(bin):
                 hex += key
     return hex
 
+
 def Bin_To_Den(bin):
     # REVERSING THE VALUE
     bin = bin[::-1]
@@ -85,10 +86,10 @@ def Conversion_Type():
         value = input("Enter the hex value: ")
         print(Hex_To_Den(value))
     elif option == "den to bin":
-        value = input("Enter the denary value: ")
+        value = int(input("Enter the denary value: "))
         print(Den_To_Bin(value))
     elif option == "den to hex":
-        value = input("Enter the den value: ")
+        value = int(input("Enter the den value: "))
         print(Den_To_Hex(value))
     else:
         Conversion_Type()
