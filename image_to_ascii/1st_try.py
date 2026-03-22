@@ -4,8 +4,7 @@ img = Image.open("image.jpg")
 
 # resize
 new_width = 120
-aspect_ratio = img.height / img.width
-new_height = int(new_width * aspect_ratio * 0.5)
+new_height = 120
 img = img.resize((new_width, new_height))
 
 pixels = img.load()
