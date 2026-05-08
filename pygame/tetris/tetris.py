@@ -12,6 +12,7 @@ large_font = pygame.font.SysFont('Comic Sans MS', 38)
 medium_font = pygame.font.SysFont('Comic Sans MS', 28)
 small_font = pygame.font.SysFont('Comic Sans MS', 16)
 
+
 window = pygame.display.set_mode((600,704))
 
 # constants
@@ -21,20 +22,20 @@ figures = [
         [["2","2","2"],["0","2","0"]],
         [["0","2","0"],["2","2","0"],["0","2","0"]]], # _|_ looking one
 
-        [[["2","2","2","2"]],
-        [["2"],["2"],["2"],["2"]]], # | looking one
+        [[["2","2","2"]],
+        [["2"],["2"],["2"]]], # | looking one
 
         [[["2","2"],["2","2"]]], # cube
 
-        [[["2","0","0","0"],["2","2","2","2"]],
-        [["2","2"],["2","0"],["2","0"],["2","0"]],
-        [["2","2","2","2"],["0","0","0","2"]],
-        [["0","2"],["0","2"],["0","2"],["2","2"]]], # |___ looking one
+        [[["2","0","0"],["2","2","2"]],
+        [["2","2"],["2","0"],["2","0"]],
+        [["2","2","2"],["0","0","2"]],
+        [["0","2"],["0","2"],["2","2"]]], # |___ looking one
 
-        [[["0","0","0","2"],["2","2","2","2"]],
-        [["2","0"],["2","0"],["2","0"],["2","2"]],
-        [["2","2","2","2"],["2","0","0","0"]],
-        [["2","2"],["0","2"],["0","2"],["0","2"]]], # ___| looking one
+        [[["0","0","2"],["2","2","2"]],
+        [["2","0"],["2","0"],["2","2"]],
+        [["2","2","2"],["2","0","0"]],
+        [["2","2"],["0","2"],["0","2"]]], # ___| looking one
 
         [[["0","2","2"],["2","2","0"]],
         [["2","0"],["2","2"],["0","2"]]], # _|- looking one
@@ -90,20 +91,16 @@ def Rotate_Piece():
         for i in range(len(figures[3][turn])):
             for k in range(len(figures[3][turn][i])):
                 if figures[3][turn][i][k] == "2":
-                    if turn in [0,2]:
+                    if turn in [1,2,3]:
                         modified_tetris[figure_start_i[0]+i][figure_start_i[1]+k+1] = "2"
-                    elif turn == 3:
-                        modified_tetris[figure_start_i[0]+i][figure_start_i[1]+k-1] = "2"
                     else:
                         modified_tetris[figure_start_i[0]+i][figure_start_i[1]+k] = "2"
     elif random_figure == 4:
         for i in range(len(figures[4][turn])):
             for k in range(len(figures[4][turn][i])):
                 if figures[4][turn][i][k] == "2":
-                    if turn in [0,2]:
+                    if turn in [1,3]:
                         modified_tetris[figure_start_i[0]+i][figure_start_i[1]+k+1] = "2"
-                    elif turn == 3:
-                        modified_tetris[figure_start_i[0]+i][figure_start_i[1]+k-1] = "2"
                     else:
                         modified_tetris[figure_start_i[0]+i][figure_start_i[1]+k] = "2"
     elif random_figure == 5:
@@ -145,20 +142,16 @@ def Saving_Rotation_Indexes():
         for i in range(len(figures[3][turn])):
             for k in range(len(figures[3][turn][i])):
                 if figures[3][turn][i][k] == "2":
-                    if turn in [0,2]:
+                    if turn in [1,3]:
                         new_coordinates.append([figure_start_i[0]+i,figure_start_i[1]+k+1])
-                    elif turn == 3:
-                        new_coordinates.append([figure_start_i[0]+i,figure_start_i[1]+k-1])
                     else:
                         new_coordinates.append([figure_start_i[0]+i,figure_start_i[1]+k])
     elif random_figure == 4:
         for i in range(len(figures[4][turn])):
             for k in range(len(figures[4][turn][i])):
                 if figures[4][turn][i][k] == "2":
-                    if turn in [0,2]:
+                    if turn in [1,3]:
                         new_coordinates.append([figure_start_i[0]+i,figure_start_i[1]+k+1])
-                    elif turn == 3:
-                        new_coordinates.append([figure_start_i[0]+i,figure_start_i[1]+k-1])
                     else:
                         new_coordinates.append([figure_start_i[0]+i,figure_start_i[1]+k])
     elif random_figure == 5:
