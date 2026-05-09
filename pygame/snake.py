@@ -4,6 +4,19 @@ import sys
 import random
 import time
 
+
+""" --------------------------
+    | USE ARROW KEYS TO MOVE |
+    --------------------------
+"""
+
+
+print("""    --------------------------
+    | USE ARROW KEYS TO MOVE |
+    --------------------------
+""")
+
+
 pygame.init()
 screen = pygame.display.set_mode((920,640))
 
