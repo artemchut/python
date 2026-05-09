@@ -5,6 +5,22 @@ import random
 import csv
 import time
 
+
+"""-----------------------------------
+   |     USE ARROW KEYS TO MOVE      |
+   | KEY DOWN TO MOVE THE PIECE DOWN |
+   | AND KEY UP TO ROTATE THE PIECE  |
+   -----------------------------------
+"""
+
+print("""   -----------------------------------
+   |     USE ARROW KEYS TO MOVE      |
+   | KEY DOWN TO MOVE THE PIECE DOWN |
+   | AND KEY UP TO ROTATE THE PIECE  |
+   -----------------------------------
+""")
+
+
 pygame.font.init()
 pygame.init()
 
